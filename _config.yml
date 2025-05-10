@@ -32,8 +32,8 @@ github_username:  joelwilner
 # Build settings
 remote_theme: "mmistakes/minimal-mistakes@4.27.1"
 plugins:
-  - jekyll-feed
-  - jekyll-seo-tag
+  #- jekyll-feed
+  #- jekyll-seo-tag
   - jekyll-remote-theme
   - jekyll-include-cache
 # Exclude from processing.
