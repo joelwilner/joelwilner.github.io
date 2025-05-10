@@ -30,7 +30,7 @@ baseurl: "" # the subpath of your site, e.g. /blog
 github_username:  joelwilner
 
 # Build settings
-theme: minima
+theme: minimal-mistakes-jekyll
 plugins:
   - jekyll-feed
 
