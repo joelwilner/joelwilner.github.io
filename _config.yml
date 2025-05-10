@@ -21,15 +21,13 @@
 domain: joelwilner.github.io       # if you want to force HTTPS, specify the domain without the http at the start, e.g. example.com
 url: https://joelwilner.github.io  # the base hostname and protocol for your site, e.g. http://example.com
 title: Joel Wilner
-email: your-email@example.com
+email: joel.a.wilner.gr (at) dartmouth.edu
 description: >- # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+  Joel Wilner is a glaciologist and glacial geologist leveraging Arctic & alpine fieldwork, numerical modeling, and large-scale data analysis to investigate past and future glacier change, glacial erosion, and cryosphere-centric climate solutions.
 baseurl: "" # the subpath of your site, e.g. /blog
 #url: "" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: jekyllrb
-github_username:  jekyll
+#twitter_username: jekyllrb
+github_username:  joelwilner
 
 # Build settings
 theme: minima
