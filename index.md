@@ -1,6 +1,6 @@
 ---
 layout: splash
-title: "Climate, Glaciers, and Erosion"
+title: "Joel Wilner"
 header:
   overlay_image: /assets/images/websitebanner.jpg
   overlay_filter: "0.3"
@@ -10,13 +10,13 @@ header:
     #  url: "/academicportfolio/"
     #- label: "Contact"
     #  url: "/contact/"
-excerpt: "Example tagline."
+excerpt: "Investigating climate, glaciers, and erosion at local to global scales."
 intro: 
   - excerpt: 'Welcome to my personal site. I’m a glaciologist, geologist, and adventurer.'
 feature_row:
   - image_path: /assets/images/Wilner_field_cropped-2.jpg
-    title: "About Me"
-    excerpt: "Learn more about my background, philosophy, and passions."
+    title: "About Joel"
+    excerpt: "Learn more about my background, academic passions, and research philosophy."
     url: "/about/"
     btn_label: "Read More"
     btn_class: "btn--primary"
