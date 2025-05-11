@@ -34,3 +34,5 @@ feature_row:
     btn_class: "btn--primary"
 ---
 
+{% include feature_row %}
+
