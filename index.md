@@ -6,10 +6,10 @@ header:
   overlay_filter: "0.3"
   caption: ""
   actions:
-    - label: "My Research"
-      url: "/academicportfolio/"
-    - label: "Contact"
-      url: "/contact/"
+    #- label: "My Research"
+    #  url: "/academicportfolio/"
+    #- label: "Contact"
+    #  url: "/contact/"
 excerpt: "Example tagline."
 intro: 
   - excerpt: 'Welcome to my personal site. I’m a glaciologist, geologist, and adventurer.'
