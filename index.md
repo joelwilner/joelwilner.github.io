@@ -20,7 +20,7 @@ feature_row:
     url: "/about/"
     btn_label: "Read More"
     btn_class: "btn--primary"
-  - image_path: /assets/images/Ross.jpg
+  - image_path: /assets/images/Ross.pdf
     title: "My Research"
     excerpt: "Selected projects I've worked on, from Antarctic iceberg calving to global glacial erosion."
     url: "/portfolio/"
