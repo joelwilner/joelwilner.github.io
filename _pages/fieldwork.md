@@ -1,6 +1,6 @@
 ---
 permalink: /fieldwork/
-title: "Fieldwork"
+title: "Field Expeditions"
 layout: single
 classes: wide
 ---
@@ -70,6 +70,37 @@ classes: wide
   </div>
 </div>
 
+<div class="fieldwork-card">
+  <img src="/assets/images/project3.png" alt="Fieldwork 3">
+  <div class="fieldwork-content">
+    <h3>Site C: Urban Heat</h3>
+    <p>Temperature mapping and air quality readings across metropolitan zones.</p>
+  </div>
+</div>
+
+<div class="fieldwork-card">
+  <img src="/assets/images/project3.png" alt="Fieldwork 3">
+  <div class="fieldwork-content">
+    <h3>Site C: Urban Heat</h3>
+    <p>Temperature mapping and air quality readings across metropolitan zones.</p>
+  </div>
+</div>
+
+<div class="fieldwork-card">
+  <img src="/assets/images/project3.png" alt="Fieldwork 3">
+  <div class="fieldwork-content">
+    <h3>Site C: Urban Heat</h3>
+    <p>Temperature mapping and air quality readings across metropolitan zones.</p>
+  </div>
+</div>
+
+<div class="fieldwork-card">
+  <img src="/assets/images/project3.png" alt="Fieldwork 3">
+  <div class="fieldwork-content">
+    <h3>Site C: Urban Heat</h3>
+    <p>Temperature mapping and air quality readings across metropolitan zones.</p>
+  </div>
+</div>
 <!-- Add more fieldwork cards as needed -->
 
 </div>
