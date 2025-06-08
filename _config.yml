@@ -39,6 +39,9 @@ plugins:
   - jekyll-remote-theme
   - jekyll-include-cache
 
+include:
+  - _pages
+
 minimal_mistakes_skin: "contrast"
 
 # Set default layout and navigation
@@ -49,6 +52,23 @@ defaults:
       layout: default
       nav: main
 
+author:
+  name   : "Joel Wilner"
+  avatar : "/assets/images/Wilner_field_cropped-zoomed.png"
+  bio    : ""
+  links:
+    - label: "Website"
+      icon: "fas fa-fw fa-link"
+      url: "https://"
+    - label: "Twitter"
+      icon: "fab fa-fw fa-twitter-square"
+      url: "https://twitter.com/"
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/"
+    - label: "Instagram"
+      icon: "fab fa-fw fa-instagram"
+      url: "https://instagram.com/"
   # Exclude from processing.
 # The following items will not be processed, by default.
 # Any item listed under the `exclude:` key here will be automatically added to
