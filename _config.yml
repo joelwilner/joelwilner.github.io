@@ -46,13 +46,17 @@ minimal_mistakes_skin: "contrast"
 
 # Set default layout and navigation
 defaults:
-  - scope:
-      path: "_pages"
-      type: pages
-    values:
+  - values:
       layout: default
       nav: main
       author_profile: true
+        #- scope:
+        # path: "_pages"
+        #type: pages
+        #values:
+        #layout: default
+        #nav: main
+        #author_profile: true
 
 author:
   name   : "Joel Wilner"
