@@ -1,6 +1,6 @@
 ---
 permalink: /fieldwork/
-title: "Fieldwork"
+title: "Field Expeditions"
 layout: single
 classes: wide
 ---
