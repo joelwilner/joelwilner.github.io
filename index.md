@@ -12,7 +12,7 @@ header:
     #  url: "/contact/"
 excerpt: "Decoding glacial and erosive systems in a warming world."
 intro: 
-  - excerpt: 'Welcome to my personal site. I’m a glaciologist, geologist, and adventurer.'
+  - excerpt: 'Welcome to my personal site. I’m a glaciologist, glacial geologist, and adventurer.'
 feature_row:
   - image_path: /assets/images/Wilner1.jpg
     title: "About Joel"
