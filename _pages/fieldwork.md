@@ -1,12 +1,11 @@
 ---
 permalink: /fieldwork/
-title: "Field Expeditions"
+title: "Fieldwork"
 layout: single
 classes: wide
 ---
 
 <style>
-/* Grid Layout */
 .fieldwork-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -41,126 +40,105 @@ classes: wide
   margin: 0 0 0.5rem 0;
 }
 
-/* Modal Overlay */
-.modal-overlay {
-  display: none;
-  position: fixed;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
-  background: rgba(0,0,0,0.7);
-  justify-content: center;
-  align-items: center;
-  z-index: 1000;
+/* Detail View */
+#fieldworkDetail {
+  padding: 1rem;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 8px rgba(0,0,0,0.1);
 }
 
-.modal-content {
-  background: white;
-  border-radius: 12px;
-  max-width: 700px;
-  width: 90%;
-  max-height: 90%;
-  overflow-y: auto;
-  padding: 1.5rem;
-  position: relative;
-}
-
-.modal-content img {
+#fieldworkDetail img {
   width: 100%;
   max-height: 300px;
   object-fit: cover;
-  border-radius: 8px;
   margin-bottom: 1rem;
+  border-radius: 8px;
 }
 
-.modal-content h2 {
-  margin-top: 0;
-}
-
-.modal-close {
-  position: absolute;
-  top: 0.5rem;
-  right: 0.75rem;
+#fieldworkDetail button {
+  margin-bottom: 1rem;
   background: none;
   border: none;
-  font-size: 1.5rem;
-  color: #999;
+  color: #007acc;
+  font-size: 1rem;
   cursor: pointer;
+  padding: 0;
+}
+#fieldworkDetail button:hover {
+  text-decoration: underline;
 }
 </style>
 
-<!-- Grid of Cards -->
-<div class="fieldwork-grid">
+<!-- Grid of Fieldwork Cards -->
+<div id="fieldworkGrid" class="fieldwork-grid">
 
-<div class="fieldwork-card" onclick="openModal('Site A', 'Longer description of Site A fieldwork, including objectives, data collection methods, and outcomes.', '/assets/images/field1.jpg')">
-  <img src="/assets/images/field1.jpg" alt="Fieldwork 1">
-  <div class="fieldwork-content">
-    <h3>Site A: Coastal Survey</h3>
-    <p>Brief: shoreline erosion monitoring.</p>
+  <div class="fieldwork-card" onclick="showDetail('site-a')">
+    <img src="/assets/images/field1.jpg" alt="Site A">
+    <div class="fieldwork-content">
+      <h3>Site A: Coastal Survey</h3>
+      <p>Brief: shoreline erosion monitoring.</p>
+    </div>
   </div>
-</div>
 
-<div class="fieldwork-card" onclick="openModal('Site B', 'Alpine ecosystem tracking via multispectral drone flights and temperature loggers.', '/assets/images/field2.jpg')">
-  <img src="/assets/images/field2.jpg" alt="Fieldwork 2">
-  <div class="fieldwork-content">
-    <h3>Site B: Alpine Vegetation</h3>
-    <p>Brief: mountain ecology study.</p>
+  <div class="fieldwork-card" onclick="showDetail('site-b')">
+    <img src="/assets/images/field2.jpg" alt="Site B">
+    <div class="fieldwork-content">
+      <h3>Site B: Alpine Vegetation</h3>
+      <p>Brief: alpine ecosystem monitoring.</p>
+    </div>
   </div>
-</div>
 
-<div class="fieldwork-card" onclick="openModal('Site C', 'Urban heat island profiling using remote sensors and community mapping.', '/assets/images/field3.jpg')">
-  <img src="/assets/images/field3.jpg" alt="Fieldwork 3">
-  <div class="fieldwork-content">
-    <h3>Site C: Urban Heat</h3>
-    <p>Brief: city climate data collection.</p>
+  <div class="fieldwork-card" onclick="showDetail('site-c')">
+    <img src="/assets/images/field3.jpg" alt="Site C">
+    <div class="fieldwork-content">
+      <h3>Site C: Urban Heat</h3>
+      <p>Brief: city climate data collection.</p>
+    </div>
   </div>
-</div>
-
-<div class="fieldwork-card" onclick="openModal('Site C', 'Urban heat island profiling using remote sensors and community mapping.', '/assets/images/field3.jpg')">
-  <img src="/assets/images/field3.jpg" alt="Fieldwork 3">
-  <div class="fieldwork-content">
-    <h3>Site C: Urban Heat</h3>
-    <p>Brief: city climate data collection.</p>
-  </div>
-</div>
-
-<div class="fieldwork-card" onclick="openModal('Site C', 'Urban heat island profiling using remote sensors and community mapping.', '/assets/images/field3.jpg')">
-  <img src="/assets/images/field3.jpg" alt="Fieldwork 3">
-  <div class="fieldwork-content">
-    <h3>Site C: Urban Heat</h3>
-    <p>Brief: city climate data collection.</p>
-  </div>
-</div>
-
-<div class="fieldwork-card" onclick="openModal('Site C', 'Urban heat island profiling using remote sensors and community mapping.', '/assets/images/field3.jpg')">
-  <img src="/assets/images/field3.jpg" alt="Fieldwork 3">
-  <div class="fieldwork-content">
-    <h3>Site C: Urban Heat</h3>
-    <p>Brief: city climate data collection.</p>
-  </div>
-</div>
-<!-- Add more cards as needed -->
 
 </div>
 
-<!-- Modal Overlay -->
-<div class="modal-overlay" id="modalOverlay">
-  <div class="modal-content" id="modalContent">
-    <button class="modal-close" onclick="closeModal()">×</button>
-    <img id="modalImg" src="" alt="">
-    <h2 id="modalTitle"></h2>
-    <p id="modalDesc"></p>
-  </div>
+<!-- Detail View -->
+<div id="fieldworkDetail" style="display: none;">
+  <button onclick="returnToGrid()">← Back to Fieldwork</button>
+  <div id="detailContent"></div>
 </div>
 
 <script>
-function openModal(title, desc, imgSrc) {
-  document.getElementById('modalTitle').innerText = title;
-  document.getElementById('modalDesc').innerText = desc;
-  document.getElementById('modalImg').src = imgSrc;
-  document.getElementById('modalOverlay').style.display = 'flex';
+const fieldworkData = {
+  'site-a': {
+    title: 'Site A: Coastal Survey',
+    img: '/assets/images/field1.jpg',
+    desc: 'This project monitors shoreline erosion using UAV imagery and in-situ water quality sensors. Long-term data collection contributes to coastal resilience modeling and hazard prediction.'
+  },
+  'site-b': {
+    title: 'Site B: Alpine Vegetation',
+    img: '/assets/images/field2.jpg',
+    desc: 'At high-elevation sites, vegetation shifts were monitored using NDVI imagery and soil sampling. This project helps understand climate change impacts on alpine ecosystems.'
+  },
+  'site-c': {
+    title: 'Site C: Urban Heat',
+    img: '/assets/images/field3.jpg',
+    desc: 'Using remote temperature sensors and community surveys, this project mapped urban heat islands in metro areas to inform sustainable planning and public health strategies.'
+  }
+};
+
+function showDetail(key) {
+  const data = fieldworkData[key];
+  const container = document.getElementById('detailContent');
+  container.innerHTML = `
+    <h2>${data.title}</h2>
+    <img src="${data.img}" alt="${data.title}">
+    <p>${data.desc}</p>
+  `;
+  document.getElementById('fieldworkGrid').style.display = 'none';
+  document.getElementById('fieldworkDetail').style.display = 'block';
 }
-function closeModal() {
-  document.getElementById('modalOverlay').style.display = 'none';
+
+function returnToGrid() {
+  document.getElementById('fieldworkGrid').style.display = 'grid';
+  document.getElementById('fieldworkDetail').style.display = 'none';
 }
 </script>
 
