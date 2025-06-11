@@ -59,6 +59,7 @@ classes: wide
 
 <!-- Country Highpoints -->
 <div id="tab-countries" class="tab-content active">
+<p>Coming soon: Trip reports for each country highpoint.</p>
   <iframe title="Country Highpoints &amp; Visits" aria-label="Map" id="datawrapper-chart-fCJW1" src="https://datawrapper.dwcdn.net/fCJW1/3/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="357" data-external="1"></iframe>
   <script type="text/javascript">
     !function(){
@@ -275,14 +276,14 @@ classes: wide
 <div id="tab-states" class="tab-content">
   <p>Coming soon: Interactive map and write-ups from all 50 U.S. state highpoints.</p>
   <div class="adventure-grid">
-    <a href="/adventures/denali/" class="adventure-card">
+  <!--  <a href="/adventures/denali/" class="adventure-card">
       <img src="/assets/images/state-highpoints/Denali.jpg" alt="Denali">
       <h4>Alaska – Denali</h4>
     </a>
     <a href="/adventures/whitney/" class="adventure-card">
       <img src="/assets/images/state-highpoints/Whitney.jpg" alt="Mount Whitney">
       <h4>California – Whitney</h4>
-    </a>
+    </a> -->
     <!-- Add more state cards here -->
   </div>
 </div>

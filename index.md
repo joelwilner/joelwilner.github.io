@@ -16,21 +16,21 @@ intro:
 feature_row:
   - image_path: /assets/images/Wilner1.jpg
     title: "About Joel"
-    excerpt: "Learn more about my background, academic passions, and research philosophy."
+    excerpt: ""
     url: "/about/"
     btn_label: "Read More"
     btn_class: "btn--primary"
   - image_path: /assets/images/Ross.jpg
     title: "My Research"
-    excerpt: "Selected projects I've worked on, from Antarctic calving to global glacial erosion."
-    url: "/portfolio/"
-    btn_label: "View Projects"
+    excerpt: ""
+    url: "/research/"
+    btn_label: "Read More"
     btn_class: "btn--primary"
   - image_path: /assets/images/Sweden1.jpg
-    title: "Adventures"
-    excerpt: "My mountaineering and peakbagging adventures around the world."
-    url: "/adventures/"
-    btn_label: "View Adventures"
+    title: "Peakbagging Adventures"
+    excerpt: ""
+    url: "/peakbagging/"
+    btn_label: "Read More"
     btn_class: "btn--primary"
 ---
 
