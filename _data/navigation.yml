@@ -4,7 +4,7 @@
 #    url: https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/
 main:
   - title: "About Me"
-    url: /about/
+    url: /aboutme/
   - title: "Research"
     url: /research/
   - title: "Field Expeditions"
