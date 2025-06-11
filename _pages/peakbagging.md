@@ -59,7 +59,6 @@ classes: wide
 
 <!-- Country Highpoints -->
 <div id="tab-countries" class="tab-content active">
-<p>Coming soon: Trip reports for each country highpoint.</p>
   <iframe title="Country Highpoints &amp; Visits" aria-label="Map" id="datawrapper-chart-fCJW1" src="https://datawrapper.dwcdn.net/fCJW1/3/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="357" data-external="1"></iframe>
   <script type="text/javascript">
     !function(){
@@ -76,7 +75,7 @@ classes: wide
       });
     }();
   </script>
-
+<p>Coming soon: Trip reports for each country highpoint.</p>
   <div class="adventure-grid">
     <!-- Insert full country cards here, e.g. Czechia to Tanzania -->
     <!-- Example below -->
@@ -166,7 +165,7 @@ classes: wide
   </a>
 
   <a href="/adventures/united-kingdom/" class="adventure-card">
-    <img src="/assets/images/highpoints/UK.jpg" alt="United Kingdom">
+    <img src="/assets/images/highpoints/UnitedKingdom.jpg" alt="United Kingdom">
     <h4>22. United Kingdom</h4>
   </a>
 
