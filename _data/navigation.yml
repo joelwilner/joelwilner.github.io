@@ -11,8 +11,8 @@ main:
     url: /fieldwork/
   - title: "CV"
     url: /assets/files/Joel_Wilner_CV_June2025.pdf
-  - title: "Adventures"
-    url: /adventures/
+  - title: "Peakbagging"
+    url: /peakbagging/
       # - title: "Gallery"
       # url: /gallery/
 

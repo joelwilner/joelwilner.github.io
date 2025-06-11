@@ -1,74 +1,85 @@
 ---
-permalink: /adventures/
-title: "100 Country Highpoints"
+permalink: /peakbagging/
+title: "Peakbagging"
 layout: single
 classes: wide
 ---
 
 <style>
-/* Center map responsively */
-.adventure-map {
-  margin: 2rem auto;
-  max-width: 800px;
-  width: 100%;
+.tabs {
+  display: flex;
+  margin-bottom: 1rem;
+  border-bottom: 2px solid #ddd;
 }
-
+.tab {
+  padding: 0.75rem 1.25rem;
+  cursor: pointer;
+  font-weight: 600;
+  border-bottom: 3px solid transparent;
+  transition: border-color 0.3s ease;
+}
+.tab.active {
+  border-color: #222;
+}
+.tab-content {
+  display: none;
+}
+.tab-content.active {
+  display: block;
+}
 .adventure-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-  gap: 1.25rem;
-  margin-top: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
 }
-
 .adventure-card {
-  background: #fff;
-  border-radius: 8px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-  overflow: hidden;
   text-align: center;
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
   transition: transform 0.2s ease;
-  cursor: pointer;
-  text-decoration: none;
-  color: inherit;
 }
 .adventure-card:hover {
-  transform: scale(1.04);
+  transform: scale(1.03);
 }
-
 .adventure-card img {
   width: 100%;
-  height: 100px;
+  height: 120px;
   object-fit: cover;
-}
-
-.adventure-card h4 {
-  margin: 0.5rem;
-  font-size: 0.95rem;
 }
 </style>
 
-<div class="adventure-map">
+<!-- Tabs -->
+<div class="tabs">
+  <div class="tab active" onclick="showTab('countries')">Country Highpoints</div>
+  <div class="tab" onclick="showTab('states')">State Highpoints</div>
+</div>
+
+<!-- Country Highpoints -->
+<div id="tab-countries" class="tab-content active">
   <iframe title="Country Highpoints &amp; Visits" aria-label="Map" id="datawrapper-chart-fCJW1" src="https://datawrapper.dwcdn.net/fCJW1/3/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="357" data-external="1"></iframe>
   <script type="text/javascript">
     !function(){
       "use strict";
-      window.addEventListener("message",(function(a){
+      window.addEventListener("message",function(a){
         if(void 0!==a.data["datawrapper-height"]){
           var e=document.querySelectorAll("iframe");
           for(var t in a.data["datawrapper-height"])
             for(var r,i=0;r=e[i];i++)
               if(r.contentWindow===a.source){
-                var d=a.data["datawrapper-height"][t]+"px";
-                r.style.height=d
+                r.style.height=a.data["datawrapper-height"][t]+"px";
               }
         }
-      }))
+      });
     }();
   </script>
-</div>
 
-<div class="adventure-grid">
-  <a href="/adventures/czechia/" class="adventure-card">
+  <div class="adventure-grid">
+    <!-- Insert full country cards here, e.g. Czechia to Tanzania -->
+    <!-- Example below -->
+      <a href="/adventures/czechia/" class="adventure-card">
     <img src="/assets/images/highpoints/Czechia.jpg" alt="Czechia">
     <h4>39. Czechia</h4>
   </a>
@@ -93,7 +104,7 @@ classes: wide
     <h4>35. Ghana</h4>
   </a>
 
-    <a href="/adventures/togo/" class="adventure-card">
+  <a href="/adventures/togo/" class="adventure-card">
     <img src="/assets/images/highpoints/Togo.jpg" alt="Togo">
     <h4>34. Togo</h4>
   </a>
@@ -257,5 +268,33 @@ classes: wide
     <img src="/assets/images/highpoints/Tanzania.jpg" alt="Tanzania">
     <h4>1. Tanzania</h4>
   </a>
+  </div>
 </div>
+
+<!-- State Highpoints -->
+<div id="tab-states" class="tab-content">
+  <p>Coming soon: Interactive map and write-ups from all 50 U.S. state highpoints.</p>
+  <div class="adventure-grid">
+    <a href="/adventures/denali/" class="adventure-card">
+      <img src="/assets/images/state-highpoints/Denali.jpg" alt="Denali">
+      <h4>Alaska – Denali</h4>
+    </a>
+    <a href="/adventures/whitney/" class="adventure-card">
+      <img src="/assets/images/state-highpoints/Whitney.jpg" alt="Mount Whitney">
+      <h4>California – Whitney</h4>
+    </a>
+    <!-- Add more state cards here -->
+  </div>
+</div>
+
+<script>
+function showTab(tabName) {
+  const tabs = document.querySelectorAll(".tab");
+  const contents = document.querySelectorAll(".tab-content");
+  tabs.forEach(t => t.classList.remove("active"));
+  contents.forEach(c => c.classList.remove("active"));
+  document.querySelector(`.tab[onclick="showTab('${tabName}')"]`).classList.add("active");
+  document.getElementById(`tab-${tabName}`).classList.add("active");
+}
+</script>
 
