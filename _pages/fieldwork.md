@@ -115,7 +115,7 @@ classes: wide
   </div>
 
   <div class="fieldwork-card" onclick="showDetail('site-c')">
-    <img src="/assets/images/project3.png" alt="Site C">
+    <img src="/assets/images/ApRES.jpg" alt="Site C">
     <div class="fieldwork-content">
       <h3>Summit Station, Greenland</h3>
     </div>
