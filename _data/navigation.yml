@@ -13,8 +13,8 @@ main:
     url: /assets/files/Joel_Wilner_CV_June2025.pdf
   - title: "Adventures"
     url: /adventures/
-  - title: "Gallery"
-    url: /gallery/
+      # - title: "Gallery"
+      # url: /gallery/
 
 
       # - title: "About"

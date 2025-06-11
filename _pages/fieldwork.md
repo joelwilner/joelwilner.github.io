@@ -2,6 +2,7 @@
 permalink: /fieldwork/
 title: "Fieldwork"
 layout: single
+classes: wide
 ---
 
 <style>
@@ -100,18 +101,16 @@ layout: single
 <div id="fieldworkGrid" class="fieldwork-grid">
 
   <div class="fieldwork-card" onclick="showDetail('site-a')">
-    <img src="/assets/images/project1.jpg" alt="Site A">
+    <img src="/assets/images/project2.jpg" alt="Site A">
     <div class="fieldwork-content">
       <h3>Paramo de Frontino, Colombia</h3>
-      <p>Boulder sampling for cosmogenic surface exposure dating and tropical glacier reconstruction.</p>
     </div>
   </div>
 
   <div class="fieldwork-card" onclick="showDetail('site-b')">
-    <img src="/assets/images/project2.jpg" alt="Site B">
+    <img src="/assets/images/Russell.jpg" alt="Site B">
     <div class="fieldwork-content">
       <h3>Russell Glacier, Greenland</h3>
-      <p>Annual time-lapse photography to elucidate the effects of fluvial dynamics on calving at the glacier terminus.</p>
     </div>
   </div>
 
@@ -119,7 +118,6 @@ layout: single
     <img src="/assets/images/project3.png" alt="Site C">
     <div class="fieldwork-content">
       <h3>Summit Station, Greenland</h3>
-      <p>Autonomous phase-sensitive radio-echo sounder (ApRES) deployment for firn densification and dynamic strain components of surface elevation change.</p>
     </div>
   </div>
 
@@ -135,17 +133,17 @@ layout: single
 const fieldworkData = {
   'site-a': {
     title: 'Paramo de Frontino, Colombia',
-    img: '/assets/images/project1.jpg',
-    desc: 'This project involved boulder sampling for cosmogenic surface exposure dating to reconstruct tropical glacial extents. The high-altitude paramo landscape provided valuable insights into Holocene climate transitions in equatorial regions.'
+    img: '/assets/images/project2.jpg',
+    desc: 'Boulder sampling for cosmogenic surface exposure dating to reconstruct the glacial history of a high-altitude paramo in the Colombian Andes.'
   },
   'site-b': {
     title: 'Russell Glacier, Greenland',
-    img: '/assets/images/project2.jpg',
+    img: '/assets/images/Russell.jpg',
     desc: 'Annual time-lapse photography to elucidate the effects of fluvial dynamics on calving at the glacier terminus.'
   },
   'site-c': {
     title: 'Summit Station, Greenland',
-    img: '/assets/images/project3.png',
+    img: '/assets/images/ApRES.jpg',
     desc: 'Autonomous phase-sensitive radio-echo sounder (ApRES) deployment for firn densification and dynamic strain components of surface elevation change.'
   }
 };
