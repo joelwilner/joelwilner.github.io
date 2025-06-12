@@ -1,3 +1,15 @@
+---
+layout: splash
+title: "Joel Wilner"
+header:
+  overlay_image: /assets/images/websitebanner.jpg
+  overlay_filter: "0.3"
+  caption: ""
+excerpt: "Decoding glacial and erosive systems in a warming world."
+intro:
+  - excerpt: 'Welcome to my personal site. I’m a glaciologist, glacial geologist, and adventurer.'
+---
+
 <style>
 .feature-row-custom {
   display: flex;
@@ -19,55 +31,16 @@
   background: white;
 }
 
-.teaser {
-  position: relative;
+.feature-card .teaser {
   height: 200px;
   overflow: hidden;
 }
 
-.teaser video,
-.teaser img {
+.feature-card img,
+.feature-card video {
   width: 100%;
   height: 100%;
   object-fit: cover;
-}
-
-.video-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0,0,0,0.4);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  color: white;
-  cursor: pointer;
-  transition: background 0.3s;
-}
-
-.video-overlay:hover {
-  background: rgba(0,0,0,0.6);
-}
-
-.video-overlay span.warning {
-  font-size: 0.75rem;
-  margin-top: 0.5rem;
-  opacity: 0;
-  transition: opacity 0.3s;
-}
-
-.video-overlay:hover span.warning {
-  opacity: 1;
-}
-
-.video-overlay .play-button {
-  font-size: 2rem;
-  background: rgba(255,255,255,0.2);
-  padding: 0.5rem 1rem;
-  border-radius: 8px;
 }
 
 .feature-card .content {
@@ -93,14 +66,10 @@
   <!-- Video Card -->
   <div class="feature-card">
     <div class="teaser">
-      <video id="russellVideo" poster="/assets/images/Ross.jpg">
+      <video autoplay muted loop playsinline>
         <source src="/assets/videos/RussellWebsite.mp4" type="video/mp4">
         Your browser does not support the video tag.
       </video>
-      <div class="video-overlay" onclick="playVideo()">
-        <div class="play-button">▶ Play</div>
-        <span class="warning">Photosensitivity warning: flashing images</span>
-      </div>
     </div>
     <div class="content">
       <h2>Calving dynamics</h2>
@@ -131,13 +100,4 @@
   </div>
 
 </div>
-
-<script>
-function playVideo() {
-  const video = document.getElementById('russellVideo');
-  const overlay = video.nextElementSibling;
-  overlay.style.display = 'none';
-  video.play();
-}
-</script>
 
