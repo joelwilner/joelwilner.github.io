@@ -33,7 +33,6 @@ intro:
 
 .feature-card .teaser {
   height: 200px;
-  position: relative;
   overflow: hidden;
 }
 
@@ -42,64 +41,23 @@ intro:
   width: 100%;
   height: 100%;
   object-fit: cover;
-  display: block;
 }
 
-#videoOverlay {
-  position: absolute;
-  top: 0; left: 0; width: 100%; height: 100%;
-  background: rgba(0, 0, 0, 0.4);
-  border-radius: 0 0 8px 8px;
+.feature-card .content {
+  padding: 1rem;
+  flex-grow: 1;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
-  user-select: none;
-  transition: background 0.3s ease;
-  z-index: 10;
+  justify-content: space-between;
 }
 
-#playButton {
-  background: rgba(255, 255, 255, 0.9);
-  border: none;
-  border-radius: 50%;
-  font-size: 2.5rem;
-  width: 64px;
-  height: 64px;
-  line-height: 1;
-  cursor: pointer;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: black;
-  box-shadow: 0 0 6px rgba(0,0,0,0.3);
+.feature-card h2 {
+  font-size: 1.25rem;
+  margin: 0 0 0.5rem 0;
 }
 
-#warningText {
-  color: red;
-  font-size: 0.85rem;
-  margin-top: 0.5rem;
-  max-width: 220px;
-  text-align: center;
-  user-select: none;
-  pointer-events: none;
-  display: none; /* default hidden */
-}
-
-/* Desktop: show warning only on hover/focus */
-@media (min-width: 769px) {
-  #playButton:hover + #warningText,
-  #playButton:focus + #warningText {
-    display: block;
-  }
-}
-
-/* Mobile: always show warning */
-@media (max-width: 768px) {
-  #warningText {
-    display: block !important;
-  }
+.feature-card a {
+  margin-top: 1rem;
 }
 </style>
 
@@ -108,15 +66,10 @@ intro:
   <!-- Video Card -->
   <div class="feature-card">
     <div class="teaser">
-      <video id="russellVideo" poster="/assets/images/RussellStill.jpg" loop style="width: 100%; height: 100%; object-fit: cover;">
+      <video autoplay muted loop playsinline>
         <source src="/assets/videos/RussellWebsite.mp4" type="video/mp4">
         Your browser does not support the video tag.
       </video>
-
-      <div id="videoOverlay">
-        <button id="playButton" aria-label="Play Video" title="Play video">▶</button>
-        <span id="warningText">Photosensitivity warning: flashing images</span>
-      </div>
     </div>
     <div class="content">
       <h2>Calving dynamics</h2>
@@ -147,15 +100,4 @@ intro:
   </div>
 
 </div>
-
-<script>
-  const playButton = document.getElementById('playButton');
-  const video = document.getElementById('russellVideo');
-  const overlay = document.getElementById('videoOverlay');
-
-  playButton.addEventListener('click', () => {
-    overlay.style.display = 'none';
-    video.play();
-  });
-</script>
 
