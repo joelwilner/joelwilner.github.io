@@ -200,113 +200,51 @@
     
 
     <section class="page__content" itemprop="text">
-      <style>
-.feature-row-custom {
-  display: flex;
-  gap: 1.5rem;
-  flex-wrap: wrap;
-  justify-content: center;
-  margin-top: 2rem;
-}
+      <!-- Video Embed with Play Button and Photosensitivity Warning -->
+<div class="video-container" style="position: relative; width: 100%; max-width: 600px; margin: auto; margin-bottom: 2rem;">
+  <video id="russellVideo" poster="/assets/images/RussellStill.jpg" loop="" style="width: 100%; border-radius: 8px;">
+    <source src="/assets/videos/RussellWebsite.mp4" type="video/mp4" />
+    Your browser does not support the video tag.
+  </video>
 
-.feature-card {
-  flex: 1 1 300px;
-  max-width: 340px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  border-radius: 8px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-  overflow: hidden;
-  background: white;
-}
-
-.teaser {
-  position: relative;
-  height: 200px;
-  overflow: hidden;
-}
-
-.teaser video,
-.teaser img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.video-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0,0,0,0.4);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  color: white;
-  cursor: pointer;
-  transition: background 0.3s;
-  text-align: center;
-  padding: 1rem;
-}
-
-.video-overlay .play-button {
-  font-size: 2rem;
-  background: rgba(255,255,255,0.2);
-  padding: 0.5rem 1rem;
-  border-radius: 8px;
-  margin-bottom: 0.5rem;
-}
-
-.video-overlay .warning {
-  font-size: 0.75rem;
-  background: rgba(0, 0, 0, 0.4);
-  padding: 0.25rem 0.5rem;
-  border-radius: 4px;
-}
-
-.feature-card .content {
-  padding: 1rem;
-  flex-grow: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-.feature-card h2 {
-  font-size: 1.25rem;
-  margin: 0 0 0.5rem 0;
-}
-
-.feature-card a {
-  margin-top: 1rem;
-}
-</style>
-
-<div class="feature-row-custom">
-
-  <!-- Video Card -->
-  <div class="feature-card">
-    <div class="teaser">
-      <video id="russellVideo" poster="/assets/images/RussellStill.jpg">
-        <source src="/assets/videos/RussellWebsite.mp4" type="video/mp4" />
-        Your browser does not support the video tag.
-      </video>
-      <div class="video-overlay" id="videoOverlay" onclick="playVideo()">
-        <div class="play-button">▶</div>
-        <span class="warning">Photosensitivity warning: flashing images</span>
-      </div>
-    </div>
-    <div class="content">
-      <h2>Calving dynamics</h2>
-      <a href="/aboutme/" class="btn btn--primary">Read More</a>
-    </div>
+  <div class="video-overlay" id="videoOverlay" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.4); display: flex; flex-direction: column; justify-content: center; align-items: center; border-radius: 8px;">
+    <button id="playButton" style="background: rgba(255,255,255,0.8); border: none; border-radius: 50%; padding: 0.75rem 1rem; font-size: 2rem; cursor: pointer;">▶</button>
+    <span class="warning" id="warningText" style="display: none; color: red; font-size: 0.9rem; margin-top: 0.5rem;">Photosensitivity warning: flashing images</span>
   </div>
+</div>
 
-  <!-- Other Cards -->
-  <div class="feature-card">
+<!-- JavaScript for Play Button and Warning -->
+<script>
+  const playButton = document.getElementById('playButton');
+  const video = document.getElementById('russellVideo');
+  const overlay = document.getElementById('videoOverlay');
+  const warning = document.getElementById('warningText');
+
+  let hasAcknowledgedWarning = false;
+
+  playButton.addEventListener('mouseenter', () => {
+    warning.style.display = 'block';
+  });
+
+  playButton.addEventListener('mouseleave', () => {
+    if (!hasAcknowledgedWarning) {
+      warning.style.display = 'none';
+    }
+  });
+
+  playButton.addEventListener('click', () => {
+    if (!hasAcknowledgedWarning) {
+      warning.style.display = 'block';
+      hasAcknowledgedWarning = true;
+    } else {
+      overlay.style.display = 'none';
+      video.play();
+    }
+  });
+</script>
+
+<!-- Feature Section -->
+<div class="feature-card">
     <div class="teaser">
       <img src="/assets/images/RussellErosion.jpg" alt="Glacial erosion" />
     </div>
@@ -316,7 +254,7 @@
     </div>
   </div>
 
-  <div class="feature-card">
+<div class="feature-card">
     <div class="teaser">
       <img src="/assets/images/Frontino.png" alt="Tropical paleoclimate" />
     </div>
@@ -326,7 +264,7 @@
     </div>
   </div>
 
-</div>
+<p>&lt;/div&gt;</p>
 
 <script>
 function playVideo() {
