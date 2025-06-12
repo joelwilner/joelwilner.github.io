@@ -1,3 +1,15 @@
+---
+layout: splash
+title: "Joel Wilner"
+header:
+  overlay_image: /assets/images/websitebanner.jpg
+  overlay_filter: "0.3"
+  caption: ""
+excerpt: "Decoding glacial and erosive systems in a warming world."
+intro:
+  - excerpt: 'Welcome to my personal site. I’m a glaciologist, glacial geologist, and adventurer.'
+---
+
 <style>
 .feature-row-custom {
   display: flex;
