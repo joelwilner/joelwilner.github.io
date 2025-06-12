@@ -248,21 +248,8 @@
   color: white;
   cursor: pointer;
   transition: background 0.3s;
-}
-
-.video-overlay:hover {
-  background: rgba(0,0,0,0.6);
-}
-
-.video-overlay span.warning {
-  font-size: 0.75rem;
-  margin-top: 0.5rem;
-  opacity: 0;
-  transition: opacity 0.3s;
-}
-
-.video-overlay:hover span.warning {
-  opacity: 1;
+  text-align: center;
+  padding: 1rem;
 }
 
 .video-overlay .play-button {
@@ -270,6 +257,14 @@
   background: rgba(255,255,255,0.2);
   padding: 0.5rem 1rem;
   border-radius: 8px;
+  margin-bottom: 0.5rem;
+}
+
+.video-overlay .warning {
+  font-size: 0.75rem;
+  background: rgba(0, 0, 0, 0.4);
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
 }
 
 .feature-card .content {
@@ -295,12 +290,12 @@
   <!-- Video Card -->
   <div class="feature-card">
     <div class="teaser">
-      <video id="russellVideo" poster="/assets/images/Ross.jpg">
+      <video id="russellVideo" poster="/assets/images/RussellStill.jpg">
         <source src="/assets/videos/RussellWebsite.mp4" type="video/mp4" />
         Your browser does not support the video tag.
       </video>
-      <div class="video-overlay" onclick="playVideo()">
-        <div class="play-button">▶ Play</div>
+      <div class="video-overlay" id="videoOverlay" onclick="playVideo()">
+        <div class="play-button">▶</div>
         <span class="warning">Photosensitivity warning: flashing images</span>
       </div>
     </div>
@@ -310,7 +305,7 @@
     </div>
   </div>
 
-  <!-- Image Card 1 -->
+  <!-- Other Cards -->
   <div class="feature-card">
     <div class="teaser">
       <img src="/assets/images/RussellErosion.jpg" alt="Glacial erosion" />
@@ -321,7 +316,6 @@
     </div>
   </div>
 
-  <!-- Image Card 2 -->
   <div class="feature-card">
     <div class="teaser">
       <img src="/assets/images/Frontino.png" alt="Tropical paleoclimate" />
@@ -337,7 +331,7 @@
 <script>
 function playVideo() {
   const video = document.getElementById('russellVideo');
-  const overlay = video.nextElementSibling;
+  const overlay = document.getElementById('videoOverlay');
   overlay.style.display = 'none';
   video.play();
 }
